@@ -1,1 +1,17 @@
-<p>persona</p>
+<p>
+  <!-- Como definimos el atributo de edad como privado debemos acceder al metodo que generamos para verlos -->
+  <!-- Al ser un metodo tiene que llevar los parentesis -->
+  Nombre: {{ nombre }} <br />
+  Apellido: {{ apellido }} <br />
+  <!-- Edad:  {{ getEdad() }} -->
+  Edad: {{ edad - 1 }}
+</p>
+
+<!-- Con keyup le decimos que capture el valor que ingresamos al presionar una tecla -->
+<div (keyup)="(0)">
+  <!-- asignamos un nombre a nuesto elemento html -->
+  <input #entrada />
+  <br />
+  <!-- Y podemos mostrar el valor que se guardo en la variable #entrada -->
+  {{ entrada.value }}
+</div>
