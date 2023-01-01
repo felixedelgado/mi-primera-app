@@ -2,7 +2,49 @@
   <div class="row">
     <div class="col">
       <h1>Listado de Personas</h1>
+
+      <!-- Esto es Property Biding -->
+      <!-- Con la propiedad diabled del elemento html se deshabilita un boton -->
+      <!-- Para que angular reconozca una propiedad se va a asociar con un atributo de la clase hay que ponerlo entre corchetes -->
+      <!-- <button class="btn btn-primary" disabled>Agregar Persona</button> -->
+
+      <!-- Para asociarlo -->
+      <!-- <button class="btn btn-primary" [disabled]="deshabilitar">
+        Agregar Persona
+      </button> -->
+
+      <!-- Esto es Event Biding, es para capturar eventos -->
+      <!-- Queremos guardar el evento click que al hacer click sobre el boton se llama al metodo agregarPersona() -->
+      <!-- <button
+        class="btn btn-primary"
+        [disabled]="deshabilitar"
+        (click)="agregarPersona()"
+      >
+        Agregar Persona
+      </button>
+      <p>{{ mensaje }}</p>
       <app-persona></app-persona>
+      <label>Titulo Persona</label>
+      <input
+        type="text"
+        class="form-control"
+        (input)="modificarTitulo($event)"
+      />
+      {{ titulo }} -->
+
+      <!-- TWO WAY BIDING -->
+      <button
+        class="btn btn-primary"
+        [disabled]="deshabilitar"
+        (click)="agregarPersona()"
+      >
+        Agregar Persona
+      </button>
+      <p>{{ mensaje }}</p>
+      <app-persona></app-persona>
+      <label>Titulo Persona</label>
+      <input type="text" class="form-control" [(ngModel)]="titulo" />
+      {{ titulo }}
     </div>
   </div>
 </div>
